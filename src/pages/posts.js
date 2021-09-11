@@ -2,22 +2,21 @@ import * as React from "react"
 import Navbar from "../components/navbar"
 import icons from "../components/constantes/icons"
 import "../styles/index.css"
-import bg from "../images/bg.png"
+import colors from "../components/constantes/colors"
 
-const Test = () => {
+const Posts = () => {
     const overallStyle = {
         margin:0,
-        backgroundImage: `url(${bg})`,
-        backgroundPosition: "90% 20%",
-        height:"65vh"
+        background: colors.navbg,
+        height:"100vh"
 
     }
 
     return(
         <div style={overallStyle}>
-            <Navbar active="/test" activeIcon={icons.home}/>
+            <Navbar active="/posts" logo={icons.logo}/>
         </div>
     )
 }
 
-export default Test
+export default Posts

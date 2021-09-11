@@ -3,7 +3,7 @@ import * as React from "react"
 const menuLinks = [
     {
         name: "Home",
-        to: "/"
+        to: "/test"
     },
     {
         name: "Posts",

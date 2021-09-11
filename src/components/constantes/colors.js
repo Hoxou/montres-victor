@@ -6,7 +6,7 @@ const colors = {
     grey3:"#F5F5F5",
     grey7:"#8C8C8C",
     grey8:"#595959",
-    navbg:"linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%)",
+    navbg:"linear-gradient(90deg, rgba(223,223,223,0) 0%, rgba(249,249,249,1) 100%)"
 }
 
 export default colors;

@@ -1,5 +1,5 @@
 const icons = {
-    home:"public/favicon-32x32.png",
+    home:"../images/icon.png",
     logo:"",
     instagram:"",
 }
