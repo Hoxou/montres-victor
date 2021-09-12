@@ -1,9 +1,7 @@
-import * as React from "react"
-
 const menuLinks = [
     {
         name: "Home",
-        to: "/test"
+        to: "/home"
     },
     {
         name: "Posts",
