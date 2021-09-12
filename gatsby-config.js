@@ -35,14 +35,14 @@ module.exports = {
       },
       __key: "pages",
     },
-  ],
-  plugins: [
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        rule: {
-          include: /assets/ // See below to configure properly
-        }
+        fonts: [
+          `limelight`,
+          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
       }
     }
   ],

@@ -1,19 +1,21 @@
 import * as React from "react"
+import colors from "./constantes/colors";
 
 const Link = (props) => {
-    const color = props.color;
-    const text = props.text;
     const to = "../../.." + props.to;
 
     const linkStyles = {
         textTransform: "uppercase",
-        color: color
+        color: colors.purple3,
+        letterSpacing: "0.2vw",
+        fontSize:14,
+        width:"10vw"
     }
     
 
 
     return(
-        <a style={linkStyles} href={to}>{text}</a>
+        <a style={{ ...linkStyles, alignSelf:"flex-end" }} href={to}>{props.text}</a>
     )
 }
 
