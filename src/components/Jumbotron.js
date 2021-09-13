@@ -49,14 +49,6 @@ const Jumbotron = (props) => {
         color: colors.grey2,
     })
 
-    let LinkStyle = css({
-        fontSize: 18,
-        fontFamily: "Yu Gothic",
-        letterSpacing: "0.25vw",
-        lineHeight: "2",
-        color: colors.grey2,
-    })
-
     return (
         <div { ...overallStyle }>
             <div { ...textBoxStyle }>
