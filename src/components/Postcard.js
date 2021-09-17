@@ -3,6 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { css } from "glamor"
 import colors from "../components/constantes/colors"
 import Link from "./Link"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Postcard = (props) => {
 
@@ -11,7 +12,7 @@ const Postcard = (props) => {
         borderRadius:8,
         paddingBottom: 32,
         overflow: "hidden",
-        border: "1px solid black"
+        border: "1px solid black",
     })
 
     let textBoxStyle = css({
@@ -20,6 +21,7 @@ const Postcard = (props) => {
         justifyContent: "center",
         gap:8,
         paddingTop:"1vw",
+        
     })
 
     let titleStyle = css({
@@ -40,29 +42,21 @@ const Postcard = (props) => {
         fontFamily: "Yu Gothic",
         letterSpacing: "0.25vw",
         lineHeight: "2",
-        height:"100px",
         color: colors.grey7, 
         textOverflow: "ellipsis",
-        overflow: "hidden"
+        overflow: "hidden",
     })
     return(
         <div { ...cardStyle }>
-            <div style={{width:"100%", border:"1px solid red"}}>
-                <StaticImage
-                    src="../images/cardbg.png"
-                    alt="A Gatsby logo"
-                    placeholder="none"
-                    aspectRatio={1}
-                    width="100%"
-                    
-            />
+            <div>
+                <img src={props.image}/>
             </div>
             
             <div { ...textBoxStyle }>
                 <p { ...dateStyle }>{ props.date }</p>
                 <h1 { ...titleStyle }>{ props.title }</h1>
-                <div style={{ whiteSpace: "nowrap" }}>
-                    <p { ...descriptionStyle }>{ props.description }</p>
+                <div style={{ whiteSpace: "nowrap",  }}>
+                    <p { ...descriptionStyle } className="line-clamp">{ props.description }</p>
                 </div>
             </div>
         </div>
