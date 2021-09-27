@@ -1,7 +1,7 @@
 import * as React from "react"
-import Navbar from "../components/Navbar"
+import Navbar from "../data/Navbar"
 import "../styles/index.css"
-import colors from "../components/constantes/colors"
+
 
 const Posts = () => {
     const overallStyle = {

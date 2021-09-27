@@ -9,7 +9,8 @@ const Link = (props) => {
         color: colors.purple3,
         letterSpacing: "0.2vw",
         fontSize:14,
-        width:"10vw"
+        width:"100%",
+        textAlign:"right"
     }
     
 

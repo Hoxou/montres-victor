@@ -4,12 +4,12 @@ import bg from "../images/bg.png"
 import colors from "./constantes/colors"
 import Link from "./Link"
 
-const Jumbotron = (props) => {
+const Jumbotron = ( props ) => {
 
     let overallStyle = css({
         position:"relative",
         margin:0,
-        backgroundImage: `url(${bg})`,
+        backgroundImage: `url(${props.url})`,
         backgroundPosition: "90% 20%",
         backgroundAttachment: "fixed",
         height:"65vh"

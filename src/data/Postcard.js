@@ -1,18 +1,27 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { css } from "glamor"
-import colors from "../components/constantes/colors"
+import colors from "../data/constantes/colors"
+import Img from "gatsby-image"
 import Link from "./Link"
-import { GatsbyImage } from "gatsby-plugin-image"
 
-const Postcard = (props) => {
+const Postcard = ( props ) => {
+
 
     let cardStyle = css({
+        cursor:"pointer",
         width:"25vw",
         borderRadius:8,
         paddingBottom: 32,
         overflow: "hidden",
-        border: "1px solid black",
+        ':hover': {
+            backgroundColor: colors.grey1,
+            opacity:"0.9",
+            transition: "0.1s",
+            transform: "scale(1.005)",
+        },
+        '@media (max-width: 671px)': {
+            width:"100%"
+          },
     })
 
     let textBoxStyle = css({
@@ -20,7 +29,7 @@ const Postcard = (props) => {
         flexDirection: "column",
         justifyContent: "center",
         gap:8,
-        paddingTop:"1vw",
+        padding:"1vw",
         
     })
 
@@ -47,17 +56,15 @@ const Postcard = (props) => {
         overflow: "hidden",
     })
     return(
-        <div { ...cardStyle }>
-            <div>
-                <img src={props.image}/>
-            </div>
-            
+        <div { ...cardStyle }> 
+        <Img fluid={props.featuredImgFluid} />          
             <div { ...textBoxStyle }>
                 <p { ...dateStyle }>{ props.date }</p>
                 <h1 { ...titleStyle }>{ props.title }</h1>
                 <div style={{ whiteSpace: "nowrap",  }}>
                     <p { ...descriptionStyle } className="line-clamp">{ props.description }</p>
                 </div>
+                
             </div>
         </div>
     )

@@ -2,6 +2,10 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "Montres Victor",
+    description: "This is a blog about watches, created with passion for the Taiwan community.",
+    social: {
+      instagram: "hauk00"
+    }
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -17,23 +21,37 @@ module.exports = {
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `md`]
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: `images`,
+        path: `./src/images/`,
       },
-      __key: "images",
+      __key: `images`,
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: `pages`,
+        path: `./src/pages/`,
       },
-      __key: "pages",
+      __key: `pages`,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -44,6 +62,13 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: `blog`,
+      }
+    },
   ],
 };
