@@ -27,6 +27,16 @@ module.exports = {
         extensions: [`.mdx`, `md`]
       }
     },
+    "gatsby-plugin-mdx",
+    // Add a collection called "posts" that looks
+    // for files in content/posts/
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/blog`,
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

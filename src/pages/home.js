@@ -13,8 +13,7 @@ const Home = ({ data }) => {
 
     let listStyle = css({
         display: "flex",
-        alignItems:"center",
-        justifyContent:"center",
+        alignContent: "flex-start",
         flexWrap: "wrap",
         gap:"3vw",
         padding:"1vw",
@@ -25,25 +24,24 @@ const Home = ({ data }) => {
         <div>
             <Navbar active="/home"/>
             {posts.map(( post, index ) => {
-            if (index == 1) {
+            if (index == 0) {
                 return(
-                    <Jumbotron 
-                    url = { post.frontmatter.featuredImage } 
-                    title = { post.frontmatter.title } 
-                    date = { post.frontmatter.date } 
-                    description = { post.frontmatter.description }
-                    />
+                    <div key = { post.slug }>
+                        <Jumbotron 
+                        title = { post.frontmatter.title } 
+                        date = { post.frontmatter.date } 
+                        description = { post.frontmatter.description }
+                        />
+                    </div>
                 )
             }
-
             })}
             
             <div style={{ ...listStyle, gap:"none" }}>
                 <Commandbar title="Latest Posts"/>
                 <div { ...listStyle }> 
                     {posts.map(( post, index ) => {
-
-                        if (index != 1) {
+                        if (index != 0) {
                             return(
                                 <div key = { post.slug }>
                                     <Link to = { post.slug } style= {{ textDecoration: "none" }}>
@@ -56,8 +54,7 @@ const Home = ({ data }) => {
                                     </Link> 
                                 </div>
                             )
-                        }
-                        
+                        }        
                     })}
                 </div>  
             </div>       
