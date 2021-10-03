@@ -44,7 +44,7 @@ const Home = ({ data }) => {
                         if (index != 0) {
                             return(
                                 <div key = { post.slug }>
-                                    <Link to = { post.slug } style= {{ textDecoration: "none" }}>
+                                    <Link to = { "../posts/" + post.slug } style= {{ textDecoration: "none" }}>
                                         <Postcard 
                                         featuredImgFluid = { post.frontmatter.featuredImage.childImageSharp.fluid } 
                                         title = { post.frontmatter.title } 

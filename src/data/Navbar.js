@@ -24,6 +24,7 @@ const Navbar = (props) => {
         top: 0,
         left: 0,
         right: 0,
+        filter: "drop-shadow(1px 1px 20px lightgrey)"
     }
 
     const logoStyles = css({

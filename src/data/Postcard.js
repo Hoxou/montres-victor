@@ -48,7 +48,6 @@ const Postcard = ( props ) => {
 
     let descriptionStyle = css({
         fontSize: 16,
-        fontFamily: "Yu Gothic",
         letterSpacing: "0.25vw",
         lineHeight: "2",
         color: colors.grey7, 

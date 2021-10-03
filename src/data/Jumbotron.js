@@ -43,7 +43,6 @@ const Jumbotron = ( props ) => {
 
     let descriptionStyle = css({
         fontSize: 18,
-        fontFamily: "Yu Gothic",
         letterSpacing: "0.25vw",
         lineHeight: "2",
         color: colors.grey2,
@@ -55,7 +54,7 @@ const Jumbotron = ( props ) => {
                 <h1 { ...titleStyle }>{ props.title }</h1>
                 <p { ...dateStyle }>{ props.date }</p>
                 <p { ...descriptionStyle }>{ props.description }...</p>
-                <Link to="/2021/2021-09-27-post-1" text="See more"/>
+                <Link to="/posts/2021/2021-09-27-post-1" text="See more"/>
             </div>
          </div>
     )

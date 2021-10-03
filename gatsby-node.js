@@ -29,7 +29,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       // This is the slug you created before
       // (or `node.frontmatter.slug`)
-      path: "/home/" + node.slug,
+      path: "/posts/" + node.slug,
       // This component will wrap our MDX content
       component: path.resolve(`./src/templates/posts-page-layout.js`),
       // You can use the values in this context in
