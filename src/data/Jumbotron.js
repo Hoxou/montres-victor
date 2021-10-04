@@ -1,6 +1,6 @@
 import * as React from "react"
 import { css } from "glamor"
-import bg from "../../blog/2021/2021-09-27-post-1/cover.jpeg"
+import bg from "../../blog/2021/2021-10-04-post-1/cover.jpeg"
 import colors from "./constantes/colors"
 import Link from "./Link"
 
@@ -11,6 +11,7 @@ const Jumbotron = ( props ) => {
         margin:0,
         backgroundImage: `url(${bg})`,
         backgroundPosition: "70% 50%",
+        backgroundSize: "cover",
         backgroundAttachment: "fixed",
         height:"65vh"
     })
@@ -50,11 +51,11 @@ const Jumbotron = ( props ) => {
 
     return (
         <div { ...overallStyle }>
-            <div { ...textBoxStyle }>
+            <div { ...textBoxStyle } >
                 <h1 { ...titleStyle }>{ props.title }</h1>
                 <p { ...dateStyle }>{ props.date }</p>
                 <p { ...descriptionStyle }>{ props.description }...</p>
-                <Link to="/posts/2021/2021-09-27-post-1" text="See more"/>
+                <Link to="/posts/2021/2021-10-04-post-1" text="See more"/>
             </div>
          </div>
     )

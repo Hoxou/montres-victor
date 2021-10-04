@@ -45,7 +45,7 @@ const Home = ({ data }) => {
                 <Commandbar title="Latest Posts"/>
                 <div { ...listStyle }> 
                     {posts.map(( post, index ) => {
-                        if (index != 0) {
+                        if (index != 0 && index < 15) {
                             return(
                                 <div key = { post.slug }>
                                     <Link to = { "../posts/" + post.slug } style= {{ textDecoration: "none" }}>

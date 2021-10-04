@@ -10,7 +10,8 @@ const Link = (props) => {
         letterSpacing: "0.2vw",
         fontSize:14,
         width:"100%",
-        textAlign:"right"
+        textAlign:"right",
+        paddingRight:"5vw",
     }
     
 
