@@ -13,7 +13,7 @@ const menuLinks = [
     },
     {
         name: "Watch vocabulary",
-        to: "/vocab"
+        to: "/vocabulary"
     },
     {
         name: "About",

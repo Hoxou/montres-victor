@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import colors from "../data/constantes/colors"
 import Footer from "../data/Footer"
 
-const Posts = () => {
+const Vocabulary = () => {
     const overallStyle = {
         display: "flex",
         justifyContent: "center",
@@ -18,7 +18,7 @@ const Posts = () => {
 
     return(
         <div>
-            <Navbar active="/posts"/>
+            <Navbar active="/vocabulary"/>
             <div style={overallStyle}>
                 <p style={{ lineHeight: 2 }}><i>This feature is not available now.<br /> If you wish to read blog posts, please refer to the <Link to= "/home" style={{ color: colors.purple8, backgroundColor: colors.purple2, padding: 5, borderRadius: 5 }}> home page</Link> content.</i></p>
             </div>
@@ -28,4 +28,4 @@ const Posts = () => {
     )
 }
 
-export default Posts
+export default Vocabulary

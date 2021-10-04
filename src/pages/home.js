@@ -5,6 +5,7 @@ import "../styles/index.css"
 import { Link,graphql } from "gatsby" 
 import Postcard from "../data/Postcard"
 import Commandbar from "../data/Commandbar"
+import Footer from "../data/Footer"
 import { css } from "glamor"
 
 
@@ -60,7 +61,8 @@ const Home = ({ data }) => {
                         }        
                     })}
                 </div>  
-            </div>       
+            </div>  
+            <Footer />     
         </div>
     )
 }
