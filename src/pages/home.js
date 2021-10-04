@@ -15,8 +15,11 @@ const Home = ({ data }) => {
         display: "flex",
         alignContent: "flex-start",
         flexWrap: "wrap",
-        gap:"3vw",
+        gap:"1.5vw",
         padding:"1vw",
+        '@media (max-width: 671px)': {
+            gap: "3vw"
+          },
     })
 
     const posts = data.allMdx.nodes

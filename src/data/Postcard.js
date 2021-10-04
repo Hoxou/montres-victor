@@ -9,6 +9,7 @@ const Postcard = ( props ) => {
     let cardStyle = css({
         cursor:"pointer",
         width:"30vw",
+        maxWidth: "400px",
         borderRadius:8,
         paddingBottom: 32,
         backgroundColor: colors.grey1,
@@ -20,7 +21,8 @@ const Postcard = ( props ) => {
             filter: "drop-shadow(1px 1px 20px lightgrey)"
         },
         '@media (max-width: 671px)': {
-            width:"100%"
+            width:"100%",
+            maxWidth: "100%",
           },
     })
 
